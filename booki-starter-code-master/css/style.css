@@ -429,7 +429,7 @@ a {
 .footerSectionColumn {
     padding: 2rem 0 0 2rem; 
     width: 33%;
-    padding: 20px;;  
+    padding: 20px; 
 }
 
 .footerSectionColumn h3 {
@@ -447,17 +447,13 @@ a {
     display: flex;
 }
 
+.searchFormSubmitinputIcon {
+    display: none;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-
-/* Devices over 767.98px */
-@media (min-width: 767.98px) {
-    .searchFormSubmitinputIcon {
-        display: none
-    }
-}
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
@@ -514,6 +510,14 @@ a {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
+    .searchFormSubmitinputText {
+        display: none;
+    }
+
+    .searchFormSubmitinputIcon {
+        display: block;
+    }
+
     header {
         flex-direction: column;
         align-items: center;
@@ -537,16 +541,31 @@ a {
     }
 
     .Filters_global {
-    flex-direction: column;
-    gap: 20px;
+        flex-direction: column;
+        gap: 20px;
     }
     
     .menu {
         width: 100%;
         justify-content: center;
         flex-direction: row;
-        gap: 0;
-        padding-bottom: 30px;
+        gap: 15px; 
+        border-bottom: 2px #F2F2F2 solid;
+    }
+
+    .lien {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        height: 34px;  
+    }
+
+    .lien:hover {
+        border-top: none;
+        border-bottom: 2px #0065FC solid;
+        width: 50%;
     }
 
     .topnav {
@@ -563,29 +582,15 @@ a {
         font-size: 17px;
     }
 
-    .lien {
-        flex-basis: 50%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: start;
-        height: 34px;
-    }
-
     .searchFormSubmitinput {
         width: 49px;
         height: 49px;
         border-radius: 15px;
     }
 
-    .searchFormSubmitinputText {
-        display: none
-    }
-
     .InfoWrapicon {
     margin-left: 30px;
     }
-
 
     .ecoFam {
         display: flex;
@@ -618,11 +623,6 @@ a {
 
     .searchFiltersFilterTitle {
         font-size: 14px;
-    }
-
-    .lien:hover {
-        border-top: none;
-        border-bottom: 2px #0065FC solid;
     }
 
     .populaires-cards {
