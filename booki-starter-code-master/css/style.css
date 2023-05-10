@@ -38,6 +38,7 @@ body {
 .lien:hover {
         border-top: 2px #0065FC solid;
         color: #0065FC;
+        margin-bottom: -2px;
 }
 
 .lien:hover .colorlink {
@@ -551,6 +552,7 @@ a {
         flex-direction: row;
         gap: 15px; 
         border-bottom: 2px #F2F2F2 solid;
+        gap: 0; 
     }
 
     .lien {
